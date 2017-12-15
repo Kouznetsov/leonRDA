@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ic_play">\ue904</string>
+    <string name="ic_pause">\ue903</string>
+    <string name="ic_next">\ue902</string>
+    <string name="ic_previous">\ue901</string>
+    <string name="ic_replay_10">\ue900</string>
+</resources>

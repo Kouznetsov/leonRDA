@@ -2,7 +2,6 @@ package com.kh.leonrda.utils
 
 import android.content.Context
 import android.graphics.Typeface
-import android.widget.TextView
 
 class FontUtil {
 
@@ -19,8 +18,4 @@ class FontUtil {
 
     }
 
-
-    fun TextView.applyTypeface(name: String) {
-        this.typeface = getTypeFace(this.context, name)
-    }
 }
