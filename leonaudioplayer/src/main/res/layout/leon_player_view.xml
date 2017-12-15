@@ -43,24 +43,24 @@
         android:orientation="horizontal"
         android:weightSum="3.5">
 
-        <com.kh.leonrda.leonplayer.LeonSVGIcon
+        <com.kh.leonaudioplayer.LeonSVGIcon
             android:id="@+id/previousButton"
-            style="@style/PlayerButton"
+            style="@style/LeonPlayerButton"
             android:text="@string/ic_previous" />
 
-        <com.kh.leonrda.leonplayer.LeonSVGIcon
+        <com.kh.leonaudioplayer.LeonSVGIcon
             android:id="@+id/playPauseButton"
-            style="@style/PlayerButton"
+            style="@style/LeonPlayerButton"
             android:text="@string/ic_play" />
 
-        <com.kh.leonrda.leonplayer.LeonSVGIcon
+        <com.kh.leonaudioplayer.LeonSVGIcon
             android:id="@+id/nextButton"
-            style="@style/PlayerButton"
+            style="@style/LeonPlayerButton"
             android:text="@string/ic_next" />
 
-        <com.kh.leonrda.leonplayer.LeonSVGIcon
+        <com.kh.leonaudioplayer.LeonSVGIcon
             android:id="@+id/replayTenSecButton"
-            style="@style/PlayerButton"
+            style="@style/LeonPlayerButton"
             android:layout_gravity="center"
             android:layout_weight="0.5"
             android:text="@string/ic_replay_10"
