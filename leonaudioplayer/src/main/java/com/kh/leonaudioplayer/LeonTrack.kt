@@ -1,5 +1,5 @@
-package com.kh.leonrda.models
+package com.kh.leonaudioplayer
 
-import java.net.URI
+import android.net.Uri
 
-data class Track(val title: String, val uri: URI)
+data class LeonTrack(val title: String, val uri: Uri)

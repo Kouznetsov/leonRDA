@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.kh.leonrda.R
-import com.kh.leonrda.models.Track
+import com.kh.leonaudioplayer.LeonTrack
 import com.kh.leonrda.utils.FontUtil
 import kotlinx.android.synthetic.main.track_row.view.*
 
-class TracksAdapter(val context: Context, val tracks: Array<Track>) : RecyclerView.Adapter<TracksAdapter.TracksVH>() {
+class TracksAdapter(private val context: Context, private val tracks: List<LeonTrack>) : RecyclerView.Adapter<TracksAdapter.TracksVH>() {
 
     override fun getItemCount(): Int {
         return tracks.size
