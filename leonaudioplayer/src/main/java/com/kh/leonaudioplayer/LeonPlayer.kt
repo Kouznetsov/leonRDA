@@ -10,20 +10,23 @@ import android.widget.RelativeLayout
 import android.widget.SeekBar
 import kotlinx.android.synthetic.main.leon_player_view.view.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 class LeonPlayer(context: Context, attrs: AttributeSet) : RelativeLayout(context, attrs),
         SeekBar.OnSeekBarChangeListener {
 
-    lateinit var tracks: List<LeonTrack>
+     private var tracks: List<LeonTrack> = ArrayList()
+        set(value) = {
+            // set tracks and send as extra to leonMediaService
+        }
+
     var mediaPlayer: MediaPlayer
-    lateinit var mediaBrowser: MediaBrowserCompat
 
 
     init {
         LayoutInflater.from(context).inflate(R.layout.leon_player_view, this)
         mediaPlayer = MediaPlayer()
         progresSeekbar.setOnSeekBarChangeListener(this)
-        mediaBrowser = MediaBrowserCompat()
     }
 
     private fun milisToMinuteText(milis: Int) : String {
