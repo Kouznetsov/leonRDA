@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Leon Audio Player</string>
+    <string name="media_service_description">Service handling the audio playback of an app using the leonaudioplayer library</string>
 </resources>

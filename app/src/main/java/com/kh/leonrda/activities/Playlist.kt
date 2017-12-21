@@ -22,6 +22,7 @@ class Playlist : AppCompatActivity() {
         setContentView(R.layout.activity_playlist)
         setupActionbar()
         setupTracksRV()
+        player.tracks = generateTracksArray()
     }
 
     fun setupActionbar() {
@@ -54,6 +55,24 @@ class Playlist : AppCompatActivity() {
                 LeonTrack("Un peuple...", Uri.parse("///android_asset/episodes/RDA14.mp3")),
                 LeonTrack("Bien plus...", Uri.parse("///android_asset/episodes/RDA15.mp3")),
                 LeonTrack("Au dela de la mort...", Uri.parse("///android_asset/episodes/RDA16.mp3")))
+    }
+
+    public override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        savedInstanceState.putBoolean("ServiceState", player.serviceBound)
+        super.onSaveInstanceState(savedInstanceState)
+    }
+
+    public override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        player.serviceBound = savedInstanceState.getBoolean("ServiceState")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        if (player.serviceBound) {
+            unbindService(player.serviceConnection)
+            player.mediaService?.stopSelf()
+        }
     }
 }
 
